@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos ARO AIS - Plan Control</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="../img/logo.svg" alt="Logotipo Plan Control" class="logo">
+
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/utilidades.html">Utilidades</a></li>
+                <li><a href="#">Formularios</a></li>
+                <li><a href="../pages/platform-fpl/platform-fpl.html" class="resplandorNewFpl">Nuevo FPL</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="gradient-text-platform">Datos de oficinas ARO-AIS</h1>
+
+        <h2 class="platform-comencemos">Escribí en el buscador el código OACI del aeropuerto que estás buscando para encontrar los datos de la oficina.</h2>
+
+        <!-- BUSCADOR DE OFICINAS ARO AIS -->
+        <div class="container-aroAis">
+            <div class="input-aroAis">
+                <input type="text" id="formulario" placeholder="Buscar (Ej: SADM)">
+            </div>
+
+            <ul class="ul-aroAis" id="resultados">
+                <li></li>
+                <div class="resultados-infoAroAis">
+                    <p class="tel-aroAis"></p>
+                    <p class="email-aroAis"></p>
+                    <p class="info-aroAis"></p>
+                </div>
+            </ul>
+        </div>
+
+        <p class="text-centeredAroAis">La información aquí brindada puede NO estar actualizada o NO ser correcta. La misma debe ser utilizada bajo discresión y bajo riesgo del usuario.</p>
+
+        <nav class="nav-mobile">
+            <ul>
+            <span class="centered-icon">
+                <i class="fa-solid fa-circle-info fa-2xl"></i>
+                <li><a href="./utilidades.html">Utilidades</a></li>
+            </span>
+
+            <span class="centered-icon">
+                <i class="fa-solid fa-house fa-2xl"></i>
+                <li><a href="../index.html">Inicio</a></li>
+            </span>
+
+            <span class="centered-icon">
+                <i class="fa-solid fa-circle-plus fa-2xl"></i>
+                <li><a href="./platform-fpl/platform-fpl.html">Nuevo FPL</a></li>
+            </span>
+
+            </ul>
+        </nav>
+    </main>
+
+    <footer>
+        <div class="info-footer">
+            <img src="../img/logo.svg" alt="Logo Plan Control">
+            <p>hola@plancontrol.com.ar</p>
+        </div>
+
+        <div class="copy-footer">
+        <p>&copy; 2023 Plan Control.</p>
+        </div>
+        
+    </footer>
+
+        <!-- librerias -->
+        <script src="https://kit.fontawesome.com/679e20186b.js" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../js/buscadorAroAis.js"></script>
+        <script src="../js/main.js"></script>
+        
+</body>
+</html>

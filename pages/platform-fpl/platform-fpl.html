@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo FPL - Plan Control</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="../../img/logo.svg" alt="Logotipo Plan Control" class="logo">
+
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../utilidades.html">Utilidades</a></li>
+                <li><a href="#">Formularios</a></li>
+                <li><a href="../platform-fpl/platform-fpl.html" class="resplandorNewFpl">Nuevo FPL</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2 class="gradient-text-platform">¡Hola! Preparemos tu vuelo.</h1>
+
+        <h1 class="platform-comencemos">Nuevo Plan de vuelo</h2>
+
+        <div class="gridContainer">
+            <section class="primerPaso">
+                <div id="1st-step" class="FplBlock">
+                        <h3 class="stepNumber">Paso 1</h3>
+
+                        <div class="firstStepShow" id="firstStepHidden">
+
+                        <p>¿En qué fecha vas a volar?</p>
+                        <input type="date" id="fecha">
+
+                        <p>¿Con qué avión vas a volar? Ingresá la matrícula sin guiones ni espacios. Ejemplo: LVABC</p>
+                        <p class="p-smaller">07 - Identificación de la aeronave</p>
+                        <input type="text" name="" id="aircraftIdentification">
+
+                        <p>¿Bajo qué reglas vas a volar? (En caso de declarar Y o Z, luego deberás declarar en la ruta en qué punto vas a hacer el cambio de reglas de vuelo).</p>
+                        <p class="p-smaller">08 - Reglas de vuelo</p>
+                        <select id="flightRules">
+                            <option value="opcion1">Seleccionar</option>
+                            <option value="opcion2">I - IFR</option>
+                            <option value="opcion3">V - VFR</option>
+                            <option value="opcion4">Y - IFR Primero</option>
+                            <option value="opcion5">Z - VFR Primero</option>
+                        </select>
+
+                        <p>¿Van a volar 2 o más aeronaves? - Podés dejar en blanco este casillero.</p>
+                        <p class="p-smaller">09 - Número</p>
+                        <input type="text" name="" id="numberOfAircrafts">
+
+                        <p>¿Qué tipo de aeronave vas a volar? - Ejemplo: C150 para Cessna 150.</p>
+                        <p class="p-smaller">09 - Tipo de aeronave</p>
+                        <input type="text" name="" id="typeOfAircraft" maxlength="4">
+
+                        <p>¿Qué categoría de estela turbulenta tiene la aeronave?</p>
+                        <p class="p-smaller">09 - Cat. de estela turbulenta</p>
+                        <select id="turbulenceCat">
+                            <option value="opcion1">Seleccionar</option>
+                            <option value="opcion2">H - Pesada</option>
+                            <option value="opcion3">M - Media</option>
+                            <option value="opcion4">L - Ligera</option>
+                        </select>
+
+                        <p>¿Qué equipos de radiocomunicaciones, ayudas para navegación y aproximación tenés a bordo?</p>
+                        <p class="p-smaller">10 - Equipo</p>
+                        <input type="text" id="equipment" value="/">
+
+                        <div class="nextOk">
+                            <button id="nextStepTwo" class="buttonConfirmation">Siguiente paso</button>
+                        </div>
+                    </div>
+
+                    <div class="confirmedData">
+                        <p>Datos confirmados</p>
+                        <span class="iconConfirmated">
+                            <i class="fa-solid fa-plane-circle-check fa-2xl"></i>
+                        </span>
+                        <button id="editStepOne" class="buttonEdit">Editar</button>
+                        <!-- ESTO TIENE QUE APARECER CUANDO ESTÉ APLICADO EL EFECTO COLLAPSED Y ESTÉ TODO VALIDADO OK -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="pasoDos">
+                <div id="2nd-step" class="FplBlock">
+
+                    <h3 class="stepNumber">Paso 2</h3>
+
+                    <p>¿Desde qué aeródromo vas a despegar?</p>
+                    <p class="p-smaller">13 - Aeródromo de salida</p>
+                    <!--HAY QUE BUSCAR UNA BASE CON TODOS LOS AERÓDROMOS Y DECLARALA ACÁ CON UN SELECT. TAMBIEN EL USUARIO DEBE PODER ESCRIBIR Y BUSCAR ADs.-->
+
+                    <p>¿A qué hora vas a despegar? - La hora debe estar en formato UTC. Debes declararla en 4 caracteres, en formato HHMM.</p>
+                    <p class="p-smaller">13 - Hora</p>
+                    <input type="text" name="" id="timeTakeoff" maxlength="4">
+
+                    <p>¿Cuál es tu aeródromo de destino?</p>
+                    <p class="p-smaller">16 - Aeródromo de destino</p>
+                    <!--HAY QUE BUSCAR UNA BASE CON TODOS LOS AERÓDROMOS Y DECLARALA ACÁ CON UN SELECT. TAMBIEN EL USUARIO DEBE PODER ESCRIBIR Y BUSCAR ADs.-->
+
+                    <p>¿Cuál va a ser tu aeródromo de alternativa nro 1?</p>
+                    <p class="p-smaller">16 - Aeródromo alt.</p>
+                    <!--HAY QUE BUSCAR UNA BASE CON TODOS LOS AERÓDROMOS Y DECLARALA ACÁ CON UN SELECT. TAMBIEN EL USUARIO DEBE PODER ESCRIBIR Y BUSCAR ADs.-->
+
+                    <p>¿Cuál va a ser tu aeródromo de alternativa nro 2? - Podés dejar en blanco este casillero.</p>
+                    <p class="p-smaller">16 - 2° aeródromo alt.</p>
+                    <!--HAY QUE BUSCAR UNA BASE CON TODOS LOS AERÓDROMOS Y DECLARALA ACÁ CON UN SELECT. TAMBIEN EL USUARIO DEBE PODER ESCRIBIR Y BUSCAR ADs.-->
+
+                    <p>¿Cuál es tu EET? (Estimated Enroute Time) - Debes declararlo en 4 caracteres, en formato HHMM.</p>
+                    <p class="p-smaller">16 - EET Total</p>
+                    <input type="text" name="" id="timeEnroute" maxlength="4">
+
+                    <div class="nextOk">
+                        <button id="nextStepThree" class="buttonConfirmation">Siguiente paso</button>
+                    </div>
+
+                    <div class="confirmedData">
+                        <p>Datos confirmados</p>
+                        <span class="iconConfirmated">
+                            <i class="fa-solid fa-plane-circle-check fa-2xl"></i>
+                        </span>
+                        <button id="editStepTwo" class="buttonEdit">Editar</button>
+                        <!-- ESTO TIENE QUE APARECER CUANDO ESTÉ APLICADO EL EFECTO COLLAPSED Y ESTÉ TODO VALIDADO OK -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="tercerPaso">
+                <div id="3rd-step" class="FplBlock">
+
+                    <h3 class="stepNumber">Paso 3</h3>
+
+                    <p>¿Cuál va a ser tu velocidad de crucero? - Debes declarala en 4 caracteres, agregando ceros a la izquierda en caso de ser necesario para llegar a los 4 dígitos.</p>
+                    <p class="p-smaller">15 - Velocidad de crucero</p>
+                    <select id="speedFormat">
+                        <option value="opcion1">Seleccionar</option>
+                        <option value="opcion2">K - Kilómetros por hora (KM/H)</option>
+                        <option value="opcion3">N - Nudos</option>
+                        <option value="opcion4">M - Mach</option>
+                    </select>
+                    <input type="text" name="" id="cruiseSpeed" maxlength="4">
+
+                <p>¿A qué altura vas a volar?</p>
+                    <p class="p-smaller">15 - Nivel</p>
+                    <select id="levelFormat">
+                        <option value="opcion1">Seleccionar</option>
+                        <option value="opcion2">F - Nivel de vuelo</option>
+                        <option value="opcion3">S - Decenas de metros</option>
+                        <option value="opcion4">A - Centenares de pies</option>
+                        <option value="opcion5">M - Decenas de metros</option>
+                    </select>
+                    <input type="text" name="" id="flightLevel">
+
+                    <p>¿Qué ruta vas a llevar?</p>
+                    <p class="p-smaller">15 - Ruta</p>
+                    <textarea name="" id="rutaPlan" cols="30" rows="8"></textarea>
+
+                    <div class="nextOk">
+                        <button id="nextStepFour" class="buttonConfirmation">Siguiente paso</button>
+                    </div>
+
+                    <div class="confirmedData">
+                        <p>Datos confirmados</p>
+                        <span class="iconConfirmated">
+                            <i class="fa-solid fa-plane-circle-check fa-2xl"></i>
+                        </span>
+                        <button id="editStepThree" class="buttonEdit">Editar</button>
+                        <!-- ESTO TIENE QUE APARECER CUANDO ESTÉ APLICADO EL EFECTO COLLAPSED Y ESTÉ TODO VALIDADO OK -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="pasoCuatro">
+                <div id="4rd-step" class="FplBlock">
+
+                    <h3 class="stepNumber">Paso 4</h3>
+
+                    <p>¿Qué autonomía tiene tu aeronave considerando el combustible a bordo?</p>
+                    <p class="p-smaller">19 - Autonomía</p>
+                    <input type="text" name="" id="endurance">
+
+                    <p>¿Cuántas personas habrá a bordo de la aeronave?</p>
+                    <p class="p-smaller">19 - Personas a bordo</p>
+                    <input type="text" name="" id="personsOnBoard">
+
+                    <p>¿Qué equipos de radio para emergencia tenés a bordo?</p>
+                    <p class="p-smaller">19 - Equipo radio de emergencia</p>
+                    <input type="checkbox" id="opcion1" name="emergencyRadio">
+                    <label for="opcion1">R/</label>
+
+                    <input type="checkbox" id="opcion2" name="emergencyRadio">
+                    <label for="opcion2">U - UHF</label>
+
+                    <input type="checkbox" id="opcion3" name="emergencyRadio">
+                    <label for="opcion3">V - VHF</label>
+
+                    <input type="checkbox" id="opcion4" name="emergencyRadio">
+                    <label for="opcion3">E - ELT</label>
+
+                    <p>¿Qué equipo de supervivencia tenés a bordo?</p>
+                    <p class="p-smaller">19 - Equipo de supervivencia</p>
+                    <input type="checkbox" id="opcion1" name="survivalEquipment">
+                    <label for="opcion1">S</label>
+
+                    <input type="checkbox" id="opcion2" name="survivalEquipment">
+                    <label for="opcion2">P - Polar</label>
+
+                    <input type="checkbox" id="opcion3" name="survivalEquipment">
+                    <label for="opcion3">D - Desértico</label>
+
+                    <input type="checkbox" id="opcion4" name="survivalEquipment">
+                    <label for="opcion3">M - Marítimo</label>
+
+                    <input type="checkbox" id="opcion5" name="survivalEquipment">
+                    <label for="opcion3">J - Selva</label>
+
+                    <p>¿Tenés chalecos a bordo? Indicá los detalles en caso de tenerlos.</p>
+                    <p class="p-smaller">19 - Chalecos</p>
+                    <input type="checkbox" id="opcion1" name="emergencyJackets">
+                    <label for="opcion1">J</label>
+
+                    <input type="checkbox" id="opcion2" name="emergencyJackets">
+                    <label for="opcion2">L - Luz</label>
+
+                    <input type="checkbox" id="opcion3" name="emergencyJackets">
+                    <label for="opcion3">F - Flúor</label>
+
+                    <input type="checkbox" id="opcion4" name="emergencyJackets">
+                    <label for="opcion3">U - UHF</label>
+
+                    <input type="checkbox" id="opcion5" name="emergencyJackets">
+                    <label for="opcion3">V - VHF</label>
+
+                    <p>¿Tenés botes neumáticos a bordo? Indicá los detalles en caso de tenerlos.</p>
+                    <input type="checkbox" id="opcion1" name="emergencyDinghies">
+                    <label for="opcion1">D</label>
+                    <input type="text" name="" id="emergencyDinghiesQuantity" placeholder="Cantidad">
+                    <input type="text" name="" id="emergencyDinghiesCapacity" placeholder="Capacidad">
+
+                    <input type="checkbox" id="opcion1" name="emergencyDinghiesCover">
+                    <label for="opcion2">C (Cubierta)</label>
+                    <input type="text" name="" id="emergencyDinghiesColor" placeholder="Color">
+
+                    <p>¿De qué color y qué distintivos visuales tiene tu aeronave?</p>
+                    <p class="p-smaller">19 - Color y marcas de la aeronave</p>
+                    <input type="text" name="" id="aircraftMarkings">
+
+                    <p>¿Quién es el comandante de la aeronave?</p>
+                    <p class="p-smaller">19 - Comandante de la aeronave</p>
+                    <input type="text" name="" id="aircraftMarkings">
+
+                    <div class="nextOk">
+                        <button id="nextStepFive" class="buttonConfirmation">Siguiente paso</button>
+                    </div>
+
+                    <div class="confirmedData">
+                        <p>Datos confirmados</p>
+                        <span class="iconConfirmated">
+                            <i class="fa-solid fa-plane-circle-check fa-2xl"></i>
+                        </span>
+                        <button id="editStepFour" class="buttonEdit">Editar</button>
+                        <!-- ESTO TIENE QUE APARECER CUANDO ESTÉ APLICADO EL EFECTO COLLAPSED Y ESTÉ TODO VALIDADO OK -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="pasoCinco">
+                <div id="5ft-step" class="FplBlock">
+
+                    <h3 class="stepNumber">Paso 5</h3>
+
+                    <p>¿Otros datos que declarar?</p>
+                    <p class="p-smaller">18 - Otros datos</p>
+                    <textarea name="" id="remarks" cols="30" rows="8"></textarea>
+                    <!--OJO QUE EL DOF VA ACÁ Y CON FORMATO AAMMDD-->
+
+                    <p>Firma del comandante de la aeronave</p>
+                    <canvas id="commandSignature" width="200" height="100"></canvas>
+
+                    <div class="confirmedData">
+                        <p>Datos confirmados</p>
+                        <span class="iconConfirmated">
+                            <i class="fa-solid fa-plane-circle-check fa-2xl"></i>
+                        </span>
+                        <button id="editStepFive" class="buttonEdit">Editar</button>
+                        <!-- ESTO TIENE QUE APARECER CUANDO ESTÉ APLICADO EL EFECTO COLLAPSED Y ESTÉ TODO VALIDADO OK -->
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+
+        <p class="disclaimer">Plan Control NO se hace responsable de omisiones y/o errores en los planes de vuelo generados con esta plataforma. 
+            Los planes de vuelo generados son una herramienta de ayuda y deben ser revisados y validados por el piloto y/o operador de vuelo y/o autoridad aeronáutica antes de ser utilizados. 
+            La responsabilidad final del uso (cualquiera sea el mismo) del plan de vuelo generado y cualquier otro dato y/o información brindada por Plan Control recae UNICA Y EXCLUSIVAMENTE en el piloto y/o operador de vuelo y deben ser chequeados con las autoridades que correspondan. 
+            Es importante recordar que los planes de vuelo generados no deben ser utilizados como única fuente de información para la planificación de vuelos y 
+            deben ser complementados con otros recursos de información, incluyendo informes meteorológicos y cartas aeronáuticas actualizadas.</p>
+
+            <nav class="nav-mobile">
+                <ul>
+                <span class="centered-icon">
+                    <i class="fa-solid fa-circle-info fa-2xl"></i>
+                    <li><a href="../utilidades.html">Utilidades</a></li>
+                </span>
+    
+                <span class="centered-icon">
+                    <i class="fa-solid fa-house fa-2xl"></i>
+                    <li><a href="../../index.html">Inicio</a></li>
+                </span>
+    
+                <span class="centered-icon">
+                    <i class="fa-solid fa-circle-plus fa-2xl"></i>
+                    <li><a href="./platform-fpl.html">Nuevo FPL</a></li>
+                </span>
+    
+                </ul>
+            </nav>
+    </main>
+
+    <footer>
+        <div class="info-footer">
+            <img src="../../img/logo.svg" alt="Logo Plan Control">
+            <p>hola@plancontrol.com.ar</p>
+        </div>
+
+        <div class="copy-footer">
+        <p>&copy; 2023 Plan Control.</p>
+        </div>
+        
+        <p>V1.0</p>
+
+    </footer>
+
+    <!-- librerias -->
+    <script src="https://kit.fontawesome.com/679e20186b.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+    {"aroAisOff": "SABE - AEROPARQUE", "aroAisTelNumber": "(011)4514-1513", "aroAisEmail": "acaer@eana.com.ar", "aroAisInfo": "Oficina H24"},
+    {"aroAisOff": "SAZB - BAHIA BLANCA", "aroAisTelNumber": "(0291)4860300", "aroAisEmail": "acbca@eana.com.ar", "aroAisInfo": "Oficina H24"},
+    {"aroAisOff": "SAVC - COMODORO RIVADAVIA", "aroAisTelNumber": "(02970)4549439", "aroAisEmail": "accrv@eana.com.ar", "aroAisInfo": "Oficina H24"},
+    {"aroAisOff": "SACO - CORDOBA", "aroAisTelNumber": "(0351)4751404", "aroAisEmail": "accba@eana.com.ar", "aroAisInfo": "Oficina H24"},
+    {"aroAisOff": "SAEZ - EZEIZA", "aroAisTelNumber": "(011)44802330", "aroAisEmail": "aceze@eana.com.ar", "aroAisInfo": "Oficina H24"},
+    {"aroAisOff": "SAZM - MAR DEL PLATA", "aroAisTelNumber": "(0223)5015359", "aroAisEmail": "acmdp@eana.com.ar", "aroAisInfo": "Oficina H24"},
+    {"aroAisOff": "SAME - MENDOZA", "aroAisTelNumber": "(0261)4487486", "aroAisEmail": "acdoz@eana.com.ar", "aroAisInfo": "Oficina H24"},
+    {"aroAisOff": "SADP - PALOMAR", "aroAisTelNumber": "(011)60064271", "aroAisEmail": "acpal@eana.com.ar", "aroAisInfo": "Oficina H24"},
+    {"aroAisOff": "SARE - RESISTENCIA", "aroAisTelNumber": "(0362)4487758", "aroAisEmail": "acsis@eana.com.ar", "aroAisInfo": "Oficina H24"},
+    {"aroAisOff": "SAAR - ROSARIO", "aroAisTelNumber": "(0341)155038804", "aroAisEmail": "acros@eana.com.ar", "aroAisInfo": "Oficina H24"},
+    {"aroAisOff": "SADF - SAN FERNANDO", "aroAisTelNumber": "(011)4580-0261", "aroAisEmail": "acfdo@eana.com.ar", "aroAisInfo": "Oficina H24"},
+    {"aroAisOff": "SAZS - BARILOCHE", "aroAisTelNumber": "(0294)4405029", "aroAisEmail": "acbar@eana.com.ar", "aroAisInfo": "Oficina HJ y/o a Requerimiento"},
+    {"aroAisOff": "SARI - IGUAZU", "aroAisTelNumber": "(03757)420595", "aroAisEmail": "acigu@eana.com.ar", "aroAisInfo": "Oficina HJ y/o a Requerimiento"},
+    {"aroAisOff": "SADM - MORON", "aroAisTelNumber": "(011)46279402", "aroAisEmail": "acmor@eana.com.ar", "aroAisInfo": "Oficina HJ y/o a Requerimiento"},
+    {"aroAisOff": "SAZN - NEUQUEN", "aroAisTelNumber": "(0299)4440104", "aroAisEmail": "acneu@eana.com.ar", "aroAisInfo": "Oficina HJ y/o a Requerimiento"}
+]
